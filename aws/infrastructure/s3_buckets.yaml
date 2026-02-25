@@ -1,14 +1,13 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: 'Testing Cloud Formation'
 
-Parameters:
-  BucketName:
-    Description: raw_bucket
-    Type: String
-    Default: my-raw-bucket-bruno-testingx7k5
-
 Resources:
-  Bucket:
+  RawBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Ref BucketName
+      BucketName: raw_bruno_test
+  StagedBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: staged_bruno_test
+      
