@@ -5,7 +5,7 @@ Parameters:
   BucketName:
     Description: raw_bucket
     Type: String
-    Default: my-raw-bucket
+    Default: my-raw-bucket-bruno-testingx7k2
 
 Resources:
   Bucket:
