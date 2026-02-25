@@ -6,17 +6,17 @@ Resources:
   RawBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: raw-bruno-test
+      BucketName: raw-bruno-test_
 
   StagedBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: staged-bruno-test
+      BucketName: staged-bruno-test_
 
   ProdBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: prod-bruno-test
+      BucketName: prod-bruno-test_
 
   ExpectedDoneFilesParameter:
     Type: AWS::SSM::Parameter
