@@ -46,8 +46,3 @@ if __name__ == "__main__":
     print("\n=== SCENARIO 2: All files present ===")
     simulate(["source_a.done", "source_b.done", "source_c.done"])
     print("\n=== SCENARIO 2: All files present ===")
-
-
-    print("\n=== SCENARIO 2: All files present ===")
-    simulate(["source_a.done", "source_b.done", "source_a.done","source_b.done","source_c.done"])
-    print("\n=== SCENARIO 2: All files present ===")
