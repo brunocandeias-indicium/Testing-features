@@ -28,7 +28,7 @@ from migration_cdk.aws_cdk_stack import AwsCdkStack
 
 app = cdk.App()
 AwsCdkStack(app,"testing-11",
-            env=cdk.Environment(account='647746917454_AWSAdministratorAccess', 
+            env=cdk.Environment(account='647746917454', 
                         region='eu-west-2'))
             
 app.synth()
