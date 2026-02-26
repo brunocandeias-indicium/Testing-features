@@ -10,7 +10,7 @@ def get_expected_files():
     This means we can update the list without touching the code.
     """
     response = ssm_client.get_parameter(
-        Name="sales-migration-expected-done-files"
+        Name="sales-migration-expected-done-files-bc"
     )
     return [f.strip() for f in response["Parameter"]["Value"].split(",")]
 
