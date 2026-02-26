@@ -8,4 +8,9 @@ class AwsCdkStack(cdk.Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        bucket = s3.Bucket(self, "testing_11")
+        s3.Bucket(self, "testing_11")
+
+
+app = cdk.App()
+AwsCdkStack(app,"Testing12")
+app.synth()
