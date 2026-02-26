@@ -10,7 +10,7 @@ def simulate(done_files_present):
 
     # first, upload the simulated .done files to the real raw bucket
     s3_client = boto3.client("s3")
-    bucket = "sales-migration-raw"
+    bucket = "sales-migration-raw-bc"
 
     # clear the bucket first
     response = s3_client.list_objects_v2(Bucket=bucket)
