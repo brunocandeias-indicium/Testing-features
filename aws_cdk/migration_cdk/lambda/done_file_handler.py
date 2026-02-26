@@ -10,7 +10,7 @@ def get_expected_files():
     This means we can update the list without touching the code.
     """
     response = ssm_client.get_parameter(
-        Name="sales-migration-expected-done-files-bc"
+        Name="sales-migration-raw-bc2"
     )
     return [f.strip() for f in response["Parameter"]["Value"].split(",")]
 
@@ -21,8 +21,8 @@ def lambda_handler(event, context):
     If yes, triggers the next step in the pipeline.
     """
     # get the bucket and file that triggered this lambda
-    bucket = event["Records"][0]["s3"]["bucket"]["name"]
-    key = event["Records"][0]["s3"]["object"]["key"]
+    bucket = event["detail"]["bucket"]["name"]
+    key = event["detail"]["object"]["key"]
 
     print(f"Triggered by: s3://{bucket}/{key}")
 
