@@ -14,7 +14,7 @@ class AwsCdkStack(cdk.Stack):
 
         event_rule_donefile = event.Rule(self, 
                                          'event_rule_donefile', 
-                                         event_pattern = event.EventPattern(source=[raw_bucket]))
+                                         event_pattern = event.EventPattern(source='aws.s3'))
 
         #ssm_raw = ssm.StringParameter(self,"RawBucketNameParam", raw_bucket.bucket_name)
         
