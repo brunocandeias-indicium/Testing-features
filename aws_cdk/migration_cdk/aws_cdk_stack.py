@@ -8,6 +8,6 @@ class AwsCdkStack(cdk.Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        s3.Bucket(self,bucket_name="sales-migration-raw-bc")
+        s3.Bucket(self,id = "Bucket_raw" ,bucket_name="sales-migration-raw-bc")
 
 
