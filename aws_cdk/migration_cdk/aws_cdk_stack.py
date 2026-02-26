@@ -11,6 +11,3 @@ class AwsCdkStack(cdk.Stack):
         s3.Bucket(self, "testing_11")
 
 
-app = cdk.App()
-AwsCdkStack(app,"Testing12")
-app.synth()

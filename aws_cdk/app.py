@@ -6,8 +6,8 @@ import aws_cdk as cdk
 from migration_cdk.aws_cdk_stack import AwsCdkStack
 
 
-app = cdk.App()
-AwsCdkStack(app, "AwsCdkStack",
+#app = cdk.App()
+#AwsCdkStack(app, "AwsCdkStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
@@ -20,10 +20,12 @@ AwsCdkStack(app, "AwsCdkStack",
     # Uncomment the next line if you know exactly what Account and Region you
     # want to deploy the stack to. */
 
-    env=cdk.Environment(account='647746917454_AWSAdministratorAccess', 
-                        region='eu-west-2'),
+#    env=cdk.Environment(account='647746917454_AWSAdministratorAccess', 
+#                        region='eu-west-2'),
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-    )
+#app.synth()
 
+app = cdk.App()
+AwsCdkStack(app,"testing-11")
 app.synth()
