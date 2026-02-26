@@ -1,0 +1,26 @@
+[project]
+name = "sales-migration"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "bccb",email = "bccb1992@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3 (>=1.42.56,<2.0.0)",
+    "pandas (>=3.0.1,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "sales_migration"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=26.1.0,<27.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]

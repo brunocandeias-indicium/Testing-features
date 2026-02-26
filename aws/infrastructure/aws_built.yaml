@@ -3,25 +3,25 @@ Description: Testing Cloud Formation
 
 Resources:
 
-  RawBucket1:
+  RawBucket99:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: raw-bruno-test-2
+      BucketName: raw-bruno-test-99
 
-  StagedBucket1:
+  StagedBucket99:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: staged-bruno-test-2
+      BucketName: staged-bruno-test-99
 
-  ProdBucket1:
+  ProdBucke99:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: prod-bruno-test-2
+      BucketName: prod-bruno-test-99
 
-  ExpectedDoneFilesParameter1:
+  ExpectedDoneFilesParameter99:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: aws-raw-expected-done-files-2
+      Name: aws-raw-expected-done-files-99
       Type: String
       Value: source_a.done,source_b.done,source_c.done
       Description: Expected .done files before pipeline triggers

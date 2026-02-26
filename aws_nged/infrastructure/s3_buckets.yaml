@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Sales Migration - S3 Buckets for Raw, Staged and Curated layers, SSM Parameter"
+
+Resources:
+
+  RawBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: sales-migration-raw-bc
+      Tags:
+        - Key: Project
+          Value: sales-migration
+        - Key: Layer
+          Value: raw
+
+  StagedBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: sales-migration-staged-bc
+      Tags:
+        - Key: Project
+          Value: sales-migration
+        - Key: Layer
+          Value: staged
+
+  CuratedBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: sales-migration-curated-bc
+      Tags:
+        - Key: Project
+          Value: sales-migration
+        - Key: Layer
+          Value: curated
+
+  ExpectedDoneFilesParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "sales-migration-expected-done-files-bc"
+      Type: String
+      Value: "source_a.done,source_b.done,source_c.done"
+      Description: "Expected .done files before pipeline triggers"
+      Tags:
+        Project: sales-migration
+
+        
